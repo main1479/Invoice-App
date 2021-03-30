@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	outline: 0;
+	text-decoration: none;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	line-height: 1.6;
+	font-size: 1.2rem;
+	font-family: $font-primary;
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+	background: #f8f8fb;
+	color: $color-text;
+}
+
+.container {
+	width: 90%;
+	max-width: 73rem;
+	margin: 0 auto;
+	position: relative;
+}
+
+.main {
+	position: relative;
+	margin-top: 8rem;
+	// width: 90%;
+	// max-width: 73rem;
+	// margin: 0 auto;
+
+	.topbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 5rem;
+	}
+}
+
+.btn {
+	border: 0;
+	background: none;
+	padding:1.3rem 2rem;
+	border-radius: 100px;
+	font-weight: 700;
+	transition: all 0.3s;
+	cursor: pointer;
+	text-transform: capitalize;
+	
+	&__add {
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background: $color-primary;
+		color: #fff;
+		padding: 8px 15px 8px 8px;
+		.icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 50%;
+			background: #fff;
+			margin-right: 10px;
+
+			img {
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
+}
+
+.invoice__status {
+	position: relative;
+	padding: 1.2rem 2rem;
+	padding-left: 4rem;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 12px;
+	background: $color-paid-bg;
+	color: $color-paid;
+	text-transform: capitalize;
+
+	&.paid {
+		background: $color-paid-bg;
+		color: $color-paid;
+	}
+	&.pending {
+		background: $color-pending-bg;
+		color: $color-pending;
+	}
+	&.draft {
+		background: $color-draft-bg;
+		color: $color-draft;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: currentColor;
+		top: calc(50% - 5px);
+		left: calc(2rem - 5px);
+	}
+}

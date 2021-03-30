@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Invoice App</title>
+		<link rel="shortcut icon" href="src/img/logo.svg" type="image/x-icon" />
+
+		<!-- ================== google fonts ================ -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- ================== css files ================== -->
+		<link rel="stylesheet" href="src/css/main.css" />
+		<!-- ================== JS files ================== -->
+		<script src="./src/js/controller.js" defer></script>
+	</head>
+	<body>
+		<div class="sidebar">
+			<div class="sidebar__top">
+				<a href="#" class="logo">
+					<img src="./src/img/logo.svg" alt="Invoice App" />
+				</a>
+			</div>
+
+			<div class="sidebar__bottom">
+				<a href="https://github.com/main1479" target="_blank" class="profile">
+					<img src="https://github.com/main1479.png" alt="Mainul Islam" />
+				</a>
+			</div>
+		</div>
+
+		<main class="main">
+			<div class="container">
+				<div class="invoice__list--wrapper active">
+					<div class="topbar">
+						<div class="text__box">
+							<h1 class="heading">Invoices</h1>
+							<p class="p__text invoice__count">There is no invoices</p>
+						</div>
+						<div class="btn__box">
+							<button class="btn btn__add">
+								<span class="icon">
+									<img src="./src//img//icon-plus.svg" alt="Add new invoice" />
+								</span>
+								New
+								<span class="mobile-hide">Invoice</span>
+							</button>
+						</div>
+					</div>
+
+					<ul class="invoice__lists">
+						<!-- <li class="invoice__item">
+							<a href="#" class="invoice" data-id="RT3080">
+								<h4 class="invoice__id"><span>#</span>RT3080</h4>
+								<div class="invoice__date">Due 19 Aug 2021</div>
+								<div class="client__name">Jensen Huang</div>
+								<div class="invoice__amount">£1,800.9</div>
+								<div class="invoice__status paid">Paid</div>
+								<img src="./src//img/icon-arrow-right.svg" alt="Invoice" class="icon" />
+							</a>
+						</li> -->
+					</ul>
+				</div>
+
+				<div class="invoice__view--wrapper">
+					<a href="#" class="back">
+						<img src="./src/img//icon-arrow-left.svg" alt="back button" />
+						<span>Go back</span>
+					</a>
+
+					<div class="invoice__view">
+						<!-- <div class="invoice__view--header">
+						<div class="status">
+							<span>Status</span>
+							<div class="invoice__status pending">pending</div>
+						</div>
+						<button class="btn btn__edit" data-id="1">edit</button>
+						<button class="btn btn__delete" data-id="1">delete</button>
+						<button class="btn btn__mark" data-id="1">mark as paid</button>
+					</div> -->
+
+						<!-- <div class="invoice__view-box">
+						<div class="invoice__view-box--top">
+							<div class="left">
+								<h4 class="heading invoice__id"><span>#</span>RT3080</h4>
+								<p class="p__text invoice__description">Description</p>
+							</div>
+							<div class="right">
+								<p class="p__text street">Street Address</p>
+								<p class="p__text city">City</p>
+								<p class="p__text post-code">Post Code</p>
+								<p class="p__text country">Country</p>
+							</div>
+						</div>
+						<div class="invoice__view-box--middle">
+							<div class="date">
+								<div class="invoice__date">
+									<p class="p__text">Invoice Date</p>
+									<h4 class="heading">21 Aug 2021</h4>
+								</div>
+								<div class="payment__date">
+									<p class="p__text">Payment Due</p>
+									<h4 class="heading">20 Sep 2021</h4>
+								</div>
+							</div>
+
+							<div class="bill-to">
+								<p class="p__text">Bill To</p>
+								<h4 class="heading client__name">Alex Grim</h4>
+								<p class="p__text street">Street Address</p>
+								<p class="p__text city">City</p>
+								<p class="p__text post-code">Post Code</p>
+								<p class="p__text country">Country</p>
+							</div>
+							<div class="sent-to">
+								<p class="p__text">Sent To</p>
+								<h4 class="heading">alexgrim@mail.com</h4>
+							</div>
+						</div>
+
+						<div class="invoice__view-box--bottom">
+							<table class="invoice__items">
+								<thead class="invoice__items--heading">
+									<tr>
+										<th>Item Name</th>
+										<th>QTY.</th>
+										<th>Price</th>
+										<th>Total</th>
+									</tr>
+								</thead>
+								<tbody class="invoice__item">
+									<tr>
+										<td class="item__name">Banner Design</td>
+										<td class="quantity">1</td>
+										<td class="price">£156</td>
+										<td class="total">£156</td>
+									</tr>
+									<tr>
+										<td class="item__name">Email Design</td>
+										<td class="quantity">2</td>
+										<td class="price">£200</td>
+										<td class="total">£400</td>
+									</tr>
+								</tbody>
+								<tfoot class="invoice__footer">
+									<tr>
+										<th class="amount-due">Amount Due</th>
+										<td class="empty"></td>
+										<td class="empty"></td>
+										<td class="total__price">£556</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div> -->
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- ======================================= -->
+		<!-- ============ form ===================== -->
+		<!-- ======================================= -->
+		<!-- <div class="form__box hide">
+			<form class="form">
+				<h2 class="heading form__heading">Create Invoice</h2>
+				<div class="fields__wrapper">
+					<fieldset class="form__group">
+						<legend class="form__group--title">Bill From</legend>
+						<div class="form__group--grid">
+							<div class="input__box">
+								<label for="senderStreet" class="input__label">Street Address</label>
+								<input id="senderStreet" name="senderStreet" class="form__input" value="" />
+							</div>
+							<div class="input__box">
+								<label for="senderCity" class="input__label">City</label
+								><input id="senderCity" name="senderCity" class="form__input" value="" />
+							</div>
+							<div class="input__box">
+								<label for="senderPostCode" class="input__label">Post Code</label
+								><input id="senderPostCode" name="senderPostCode" class="form__input" value="" />
+							</div>
+							<div class="input__box">
+								<label for="senderCountry" class="input__label">Country</label
+								><input id="senderCountry" name="senderCountry" class="form__input" value="" />
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="form__group">
+						<legend class="form__group--title">Bill To</legend>
+						<div class="form__group--grid">
+							<div class="input__box">
+								<label for="clientName" class="input__label">Client's Name</label>
+								<input id="clientName" name="clientName" class="form__input" value="" />
+							</div>
+							<div class="input__box full">
+								<label for="clientEmail" class="input__label">Client's Email</label
+								><input
+									id="clientEmail"
+									name="clientEmail"
+									placeholder="e.g. email@example.com"
+									class="form__input"
+									value=""
+								/>
+							</div>
+							<div class="input__box full">
+								<label for="clientAddress.street" class="input__label">Street Address</label>
+								<input
+									id="clientAddress.street"
+									name="clientAddress.street"
+									class="form__input"
+									value=""
+								/>
+							</div>
+							<div class="input__box">
+								<label for="clientAddress.city" class="input__label">City</label
+								><input
+									id="clientAddress.city"
+									name="clientAddress.city"
+									class="form__input"
+									value=""
+								/>
+							</div>
+							<div class="input__box">
+								<label for="clientAddress.postCode" class="input__label">Post Code</label
+								><input
+									id="clientAddress.postCode"
+									name="clientAddress.postCode"
+									class="form__input"
+									value=""
+								/>
+							</div>
+							<div class="input__box">
+								<label for="clientAddress.country" class="input__label">Country</label>
+								<input
+									id="clientAddress.country"
+									name="clientAddress.country"
+									class="form__input"
+									value=""
+								/>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="form__group">
+						<div class="form__group--grid column2">
+							<div class="input__box half">
+								<label for="createdAt" class="input__label">Invoice Date</label>
+								<input type="date" name="createdAt" id="createdAt" class="form__input" />
+							</div>
+							<div class="input__box half">
+								<label for="paymentTerms" class="input__label">Payment Terms</label>
+								<select name="paymentTerms" class="form__input">
+									<option value="1">Net 1 Day</option>
+									<option value="7">Net 7 Days</option>
+									<option value="14">Net 14 Days</option>
+									<option value="30">Net 30 Days</option>
+								</select>
+							</div>
+							<div class="input__box full">
+								<label for="description" class="input__label">Description</label
+								><input
+									id="description"
+									name="description"
+									placeholder="e.g. Graphic Design Service"
+									class="form__input"
+									value=""
+								/>
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="form__group">
+						<legend class="form__group--title big">ItemList</legend>
+						<div class="form__group">
+							<div class="form__group--grid add-item">
+								<div class="input__box item__name">
+									<label for="items[0].name" class="input__label">Item Name</label
+									><input id="items[0].name" name="items[0].name" class="form__input" value="" />
+								</div>
+								<div class="input__box quantity">
+									<label for="items[0].quantity" class="input__label">Qty.</label>
+									<input
+										type="text"
+										class="form__input"
+										name="items[0].quantity"
+										id="items[0].quantity"
+										value=""
+									/>
+								</div>
+								<div class="input__box price">
+									<label for="items[0].price" class="input__label">Price</label
+									><input id="items[0].price" name="items[0].price" class="form__input" value="" />
+								</div>
+								<div class="input__box total">
+									<label for="items[0].total" class="input__label">Total</label
+									><input
+										id="items[0].total"
+										name="items[0].total"
+										disabled=""
+										class="form__input"
+										disabled
+										value="0"
+									/>
+								</div>
+								<button type="button" aria-label="delete item" class="delete">
+									<svg width="13" height="16" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.583 3.556v10.666c0 .982-.795 1.778-1.777 1.778H2.694a1.777 1.777 0 01-1.777-1.778V3.556h10.666zM8.473 0l.888.889h3.111v1.778H.028V.889h3.11L4.029 0h4.444z"
+											fill-rule="nonzero"
+										></path>
+									</svg>
+								</button>
+							</div>
+							<button type="button" class="btn btn__add-item">+ Add New Item</button>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form__bottom">
+					<button type="button" class="btn btn__discard">Discard</button
+					><button type="button" class="btn btn__draft">Save as Draft</button
+					><button type="submit" class="btn btn__save">Save &amp; Send</button>
+				</div>
+			</form>
+		</div> -->
+		<!-- <div class="form-overlay hide">&nbsp;</div> -->
+	</body>
+</html>

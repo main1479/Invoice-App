@@ -1,0 +1,74 @@
+.sidebar {
+	position: fixed;
+	left: 0;
+	top: 0px;
+	z-index: 20;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	background: rgb(55, 59, 83);
+	transition: background 0.3s ease 0s;
+	flex-direction: column;
+	width: 10rem;
+	height: 100vh;
+	border-radius: 0px 20px 20px 0px;
+   justify-content: space-between;
+
+	&__top {
+		align-self: flex-start;
+		justify-self: flex-start;
+
+		a.logo {
+			position: relative;
+			display: flex;
+			-webkit-box-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			justify-content: center;
+			width: 5rem;
+			height: 5rem;
+			border-radius: 0px 20px 20px 0px;
+			background: rgb(124, 93, 250);
+			width: 10rem;
+			height: 10rem;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				width: 100%;
+				height: 50%;
+				background: rgb(146, 119, 255);
+				border-radius: 20px 0px;
+			}
+
+			img {
+				position: relative;
+				z-index: 1;
+				width: 4rem;
+				height: 3.5rem;
+			}
+		}
+	}
+
+	&__bottom {
+		width: 100%;
+      height: 10rem;
+      border-top: 1px solid rgb(73, 78, 110);;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.profile {
+			display: block;
+			width: 5rem;
+			height: 5rem;
+			border-radius: 50%;
+			overflow: hidden;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

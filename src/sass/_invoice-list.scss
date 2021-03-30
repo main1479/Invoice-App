@@ -1,0 +1,59 @@
+.invoice__list--wrapper {
+	transition: all 0.8s cubic-bezier(.86,.49,.83,.67);
+	transform: translateX(-100%);
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-bottom: 5rem;
+
+	&.active{
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.invoice__lists {
+	.invoice__item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+
+		.invoice {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 2rem 2.5rem;
+			background: #fff;
+			border-radius: 10px;
+			color: $color-text;
+			border: 1px solid transparent;
+			transition: all 0.3s;
+
+			&:hover {
+				border-color: $color-primary;
+			}
+
+			& > * {
+				margin-right: 3rem;
+			}
+
+			&__amount {
+				margin-left: auto;
+				font-size: 18px;
+				font-weight: 700;
+				letter-spacing: -0.5px;
+			}
+
+			
+
+			.icon {
+				margin-right: 0;
+				width: 10px;
+			}
+		}
+	}
+}

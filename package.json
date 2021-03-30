@@ -1,0 +1,22 @@
+{
+	"name": "invoiceapp",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"sass": "node-sass src/sass/main.scss src/css/main.css -w",
+		"start": "parcel index.html",
+		"build": "parcel build index.html --dist-dir ./production --public-url ./"
+	},
+	"author": "Mainul Islam",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/plugin-proposal-class-properties": "^7.13.0",
+		"node-sass": "^5.0.0"
+	},
+	"dependencies": {
+		"core-js": "^3.9.1",
+		"parcel": "^2.0.0-beta.2",
+		"regenerator-runtime": "^0.13.7"
+	}
+}
