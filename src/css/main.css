@@ -363,9 +363,11 @@ body {
   top: 0px;
   padding-left: 6.4375rem;
   border-radius: 0px 20px 20px 0px;
-  transform: translateX(0); }
-  .form__box.hide {
-    transform: translateX(-100%); }
+  opacity: 0;
+  transform: translateX(-100%); }
+  .form__box.active {
+    transform: translateX(0);
+    opacity: 1; }
   .form__box .form {
     height: 100vh;
     padding: 5.5rem 3rem 0px 5.5rem;
@@ -521,6 +523,16 @@ body {
   background: rgba(0, 0, 0, 0.322);
   backdrop-filter: blur(10px);
   transition: all 0.5s cubic-bezier(0.86, 0.49, 0.83, 0.67);
-  transform: translateX(0); }
-  .form-overlay.hide {
-    transform: translateX(-100%); }
+  opacity: 0;
+  transform: translateX(-100%); }
+  .form-overlay.active {
+    transform: translateX(0);
+    opacity: 1; }
+
+.form__group.items {
+  display: flex;
+  flex-direction: column; }
+
+input[type=number] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield; }

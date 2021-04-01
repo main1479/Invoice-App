@@ -4,15 +4,16 @@
 	left: 0px;
 	z-index: 10;
 	background: rgb(255, 255, 255);
-	transition: all 0.5s cubic-bezier(.86,.49,.83,.67);
+	transition: all 0.5s cubic-bezier(0.86, 0.49, 0.83, 0.67);
 	top: 0px;
 	padding-left: 6.4375rem;
 	border-radius: 0px 20px 20px 0px;
-	transform: translateX(0);
+	opacity: 0;
+	transform: translateX(-100%);
 
-
-	&.hide{
-		transform: translateX(-100%);
+	&.active {
+		transform: translateX(0);
+		opacity: 1;
 	}
 
 	.form {
@@ -211,7 +212,7 @@
 	}
 }
 
-.form-overlay{
+.form-overlay {
 	width: 100%;
 	height: 100vh;
 	position: fixed;
@@ -221,10 +222,22 @@
 	background: rgba(0, 0, 0, 0.322);
 	// filter: blur(20px);
 	backdrop-filter: blur(10px);
-	transition: all 0.5s cubic-bezier(.86,.49,.83,.67);
-	transform: translateX(0);
+	transition: all 0.5s cubic-bezier(0.86, 0.49, 0.83, 0.67);
+	opacity: 0;
+	transform: translateX(-100%);
 
-	&.hide{
-		transform: translateX(-100%);
+	&.active {
+		transform: translateX(0);
+		opacity: 1;
 	}
+}
+
+.form__group.items{
+	display: flex;
+	flex-direction: column;
+}
+
+input[type=number]{
+	-webkit-appearance: none;
+	-moz-appearance: textfield;
 }
